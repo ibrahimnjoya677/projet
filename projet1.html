@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOTEL LE DEPLIANT</title>
+    <link rel="stylesheet" href="css1.css" media="screen"/>
+    <SCRIPT>
+            function clock() {
+                var days= ["Dimanche le","Lundi le","Mardi le","Mercredi le","Jeudi le","Vendredile","samedi le"];
+                var months = ["janvier", "f�vrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "d�cembre"];
+                localTime     = new Date();
+                date      = localTime.getDate();
+                day       = localTime.getDay();
+                full_year = localTime.getFullYear();
+                hours     = localTime.getHours();
+                minutes   = localTime.getMinutes();
+                month     = localTime.getMonth();
+                seconds   = localTime.getSeconds();
+                value     = "";
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+                value = days[day]+ " " + date + " " + months[month] + " " + full_year + " " + hours + ":" + minutes + ":" + seconds;
+               
+                document.clock.date.value = value ;
+               
+                setTimeout(clock,100);
+            }
+
+   
+        </SCRIPT>
+        <meta charset="UTF-8">
+        <title>Inscription</title>
+        <link rel="stylesheet" href="projet2.css" media="screen" type="text/css" />
+        </head>
+        <body onLoad="clock()">
+                <form action="verification.php" method="POST" name="clock" onSubmit="0">
+                <input type="text" name="date" size="200" readonly="true"class="h">
+            <header>
+                <p>
+                <img src="ms.jpg" height="150"  class="d"></p>
+        <h2>HOTEL</h2>
+                <h2>HOTEL LE DEPLIANT</h2>
+         </header>
+         <nav>
+             <ul>
+                     <li><a href="page.html">Acceuil</a></li>
+                     <li><a href="fff.html">Nos Locaux</a></li>
+                     <li><a href="fff.html">Reservation</a></li>
+                     <li><a href="fff.html">Nous Contacter</a></li>
+                     
+             </ul>
+            </nav>
+            
+</body>
+</html>
